@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/styles.css">
-
+        <script src="assets/js/Scripts.js"></script>
+        <script src="assets/js/emailvr.js"></script>
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
+        
         <title>Portfolio Prativa Sahoo</title>
     </head>
     <body>
@@ -41,17 +42,16 @@
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Prativa Sahoo</span><br>Java Developer</h1>
 
-                    <a href="#" class="button">Contact</a>
+                    <a href="#contact" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="javascript:void(0);" class="home__social-icon" onclick="handleLinkedInClick()" ><i class='bx bxl-linkedin' ></i></a>
+                    <a href="javascript:void(0);" class="home__social-icon" onclick="handleGitHubClick()"><i class='bx bxl-github' ></i></a>
                 </div>
 
                 <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="home__blob" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <mask id="mask0" mask-type="alpha">
                             <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
                         </mask>
@@ -74,7 +74,7 @@
                     
                     <div>
                         <h2 class="about__subtitle">I'am Prativa</h2>
-                        <p class="about__text">Highly skilled and results-driven software engineer with a Master's degree in Computer Science and 5+ years of professional experience in Enterprise environment. Proficient in Java, JavaScript, HTML, CSS, Spring Boot, MVC architecture, Agile methodologies, and Oracle SQL development. Seeking challenging opportunities to leverage my expertise in software development and Agile practices to contribute to innovative projects.</p>           
+                        <p class="about__text">Experienced and innovative Java Full Stack Developer with a passion for leveraging emerging technologies for taking on new challenges and expanding my skill set. With over 5+ years of professional experience in Enterprise environment. Skilled in Java, Oracle SQL development, AWS, Spring Boot, and various other full-stack development tools and technologies. Proficient in collaborating within Agile teams to design, develop, and implement robust technical solutions.</p>           
                     </div>                                   
                 </div>
             </section>
@@ -94,7 +94,9 @@
                                         <li>Web Technologies: HTML, CSS, React</li>
                                             <li>Methodologies: Agile (Scrum, Kanban)</li>
                                                 <li>Version Control: Git, VSS</li>
-                                                </ul>
+                                                <li>Excellent problem-solving and analytical skills</li>
+                                                <li>Effective communicator and collaborator</li>    
+                                            </ul>
                             </p>
                         <div class="skills__data">
                             <div class="skills__names">
@@ -159,7 +161,7 @@
                     </div>
                     
                     <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                        
                     </div>
                 </div>
             </section>
@@ -184,9 +186,6 @@
                     <a href="" class="work__img">
                         <img src="assets/img/work5.jpg" alt="">
                     </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
                 </div>
             </section>
 
@@ -195,12 +194,13 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
+                    <form class="contact__form" id="contactForm" method="post">
+                        <input type="text" id="name" placeholder="Name" class="contact__input"autocomplete="name" required>
+                        <input type="mail" id="email"placeholder="Email" class="contact__input" autocomplete="email" required>
+                        <textarea name="" id="message" cols="0" rows="10" class="contact__input" autocomplete="message" required></textarea>
+                        <input type="submit" class="contact__button button"  id="submit" value="Submit">
                     </form>
+                    
                 </div>
             </section>
         </main>
@@ -208,12 +208,8 @@
         <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">Prativa Sahoo</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-            </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+            
+            <p class="footer__copy">@Prativa. All rigths reserved</p>
         </footer>
 
 
